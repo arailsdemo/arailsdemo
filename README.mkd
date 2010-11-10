@@ -1,0 +1,9 @@
+The aRailsDemo Source Code
+==========================
+The code here will be what is published on the website and not necessarily what I am using on the production server. That means that there will be some CSS or minor changes that are left out. The current state of the Sass for the production site can always be seen by visiting the site's [public directory.][1]
+
+[1]:http://www.arailsdemo.com/stylesheets/sass/application.sass
+
+Want To Help Out?
+-----------------
+If you're following along at home and the post that you're working through isn't in this Github repository yet, then fork the repo and add your contribution. Send a pull request, and I'll add it. My idea right now is to have each section of a post be a commit, and then each completed post will be tagged. My git skills are lacking right now, so I'll have to figure out if that scheme will work out.
