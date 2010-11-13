@@ -1,23 +1,14 @@
-%h1 Listing posts
+%h1= "Building This Site"
 
-%table
-  %tr
-    %th Title
-    %th Sequence
-    %th Description
-    %th
-    %th
-    %th
+- @posts.each do |post|
+  .postShow
+    .sequence= "#" + post.sequence.to_s
+    .title= link_to post.title, post
+    .date= l post.created_at, :format => :date    
+    .admin
+      = link_to 'Edit', edit_post_path(post)
+      = link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+    .clear
 
-  - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= post.sequence
-      %td= post.description
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
+%br.clear
 = link_to 'New Post', new_post_path
