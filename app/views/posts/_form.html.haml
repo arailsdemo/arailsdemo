@@ -1,18 +1,11 @@
 = simple_form_for(@post) do |f|
   - if @post.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@post.errors.count, "error")
-        prohibited this post from being saved:
-
-      %ul
-      - @post.errors.full_messages.each do |msg|
-        %li= msg
+    = render 'shared/error_messages', :target => @post
 
   .inputs
     = f.input :title
     = f.input :sequence
-    = f.input :description
+    = f.input :description, :input_html => {:rows =>5}
 
   .actions
     = f.button :submit
