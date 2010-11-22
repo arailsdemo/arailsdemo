@@ -7,5 +7,12 @@
     = f.input :sequence
     = f.input :description, :input_html => {:rows =>5}
 
+  = f.simple_fields_for :sections do |section_f|
+    .section
+      %h2 Section
+      = section_f.input :heading
+      = section_f.input :body, :input_html => {:rows =>5}
+      = section_f.input :position
+
   .actions
     = f.button :submit
