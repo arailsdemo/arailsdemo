@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Heading:
+  = @section.heading
+%p
+  %b Body:
+  = @section.body
+%p
+  %b Position:
+  = @section.position
+%p
+  %b Post:
+  = @section.post_id
+
+= link_to 'Edit', edit_section_path(@section)
+\|
+= link_to 'Back', sections_path

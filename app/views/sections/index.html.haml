@@ -1,0 +1,25 @@
+%h1 Listing sections
+
+%table
+  %tr
+    %th Heading
+    %th Body
+    %th Position
+    %th Post
+    %th
+    %th
+    %th
+
+  - @sections.each do |section|
+    %tr
+      %td= section.heading
+      %td= section.body
+      %td= section.position
+      %td= section.post_id
+      %td= link_to 'Show', section
+      %td= link_to 'Edit', edit_section_path(section)
+      %td= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Section', new_section_path
