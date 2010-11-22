@@ -24,7 +24,8 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.xml
   def new
-    @post = Post.new
+    @post = Post.new(:sequence => Post.all.size + 1)
+    @post.sections.build
 
     respond_to do |format|
       format.html # new.html.erb
