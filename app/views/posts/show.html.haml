@@ -1,15 +1,13 @@
-%p#notice= notice
+%h1= "\##{@post.sequence} #{@post.title}"
 
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Sequence:
-  = @post.sequence
-%p
-  %b Description:
-  = @post.description
+%p= sanitize @post.description
 
+- for section in @post.sections
+  .section
+    %h2= section.heading
+    .body= sanitize section.body
+    %hr
+    
 = link_to 'Edit', edit_post_path(@post)
 \|
 = link_to 'Back', posts_path
