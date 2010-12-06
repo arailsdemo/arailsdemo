@@ -1,11 +1,16 @@
-%h1= "\##{@post.sequence} #{@post.title}"
+- title "\##{@post.sequence} #{@post.title}"
 
 %p= sanitize @post.description
 
 - for section in @post.sections
   .section
     %h2= section.heading
-    .body= sanitize section.body
+    .body= raw section.body
+    - unless section.snippet.blank?
+      .snippet
+        .content
+          .caption= section.snippet.caption
+          ~ sanitize( coderay(section.snippet.content, section.snippet.language) )
     %hr
     
 = link_to 'Edit', edit_post_path(@post)
