@@ -1,8 +1,7 @@
 -javascript 'post'
 
 = simple_form_for(@post) do |f|
-  - if @post.errors.any?
-    = render 'shared/error_messages', :target => @post
+  = render 'shared/error_messages', :target => @post
 
   .inputs
     = f.input :title
@@ -15,6 +14,14 @@
       = section_f.input :heading
       = section_f.input :body, :input_html => {:rows =>5}
       = section_f.input :position
+      
+      = section_f.simple_fields_for :snippet do |snippet_f|
+        .snippet
+          %h3 Snippet
+          = snippet_f.input :caption
+          = snippet_f.input :content, :input_html => {:rows =>5}
+          = snippet_f.input :language, :as => :select, :collection => coderay_languages
+      %hr
 
   .actions
     = f.button :submit
