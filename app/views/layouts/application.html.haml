@@ -2,7 +2,9 @@
 %html(lang="en")
   %head
     %meta(charset="utf-8")
-    %title aRailsDemo
+    %title
+      = "aRailsDemo#{(" | " + yield(:title)) unless yield(:title).blank?}"
+    
     %meta(name="description" content="An example Ruby on Rails website.")
     %meta(name="keywords" content="rails, ruby, ruby on rails, demo, example, tutorial, programming")
     
@@ -14,6 +16,7 @@
     = stylesheet_link_tag 'scaffold'
     = javascript_include_tag :defaults
     = csrf_meta_tag
+    = yield :head
   
   %body
     #container
