@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Caption:
+  = @snippet.caption
+%p
+  %b Content:
+  = @snippet.content
+%p
+  %b Language:
+  = @snippet.language
+%p
+  %b Section:
+  = @snippet.section_id
+
+= link_to 'Edit', edit_snippet_path(@snippet)
+\|
+= link_to 'Back', snippets_path

@@ -1,0 +1,25 @@
+%h1 Listing snippets
+
+%table
+  %tr
+    %th Caption
+    %th Content
+    %th Language
+    %th Section
+    %th
+    %th
+    %th
+
+  - @snippets.each do |snippet|
+    %tr
+      %td= snippet.caption
+      %td= snippet.content
+      %td= snippet.language
+      %td= snippet.section_id
+      %td= link_to 'Show', snippet
+      %td= link_to 'Edit', edit_snippet_path(snippet)
+      %td= link_to 'Destroy', snippet, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Snippet', new_snippet_path
