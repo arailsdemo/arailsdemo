@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     @post = Post.new(:sequence => Post.all.size + 1)
-    @post.sections.build
+    @post.build_section_and_snippet
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,6 +36,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @post.build_section_and_snippet
   end
 
   # POST /posts
