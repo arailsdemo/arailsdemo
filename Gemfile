@@ -7,3 +7,4 @@ gem 'jquery-rails'
 gem "compass", ">= 0.10.5"
 gem 'rails3-generators'
 gem 'simple_form'
+gem 'coderay'
