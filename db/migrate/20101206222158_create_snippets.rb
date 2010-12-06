@@ -3,7 +3,7 @@ class CreateSnippets < ActiveRecord::Migration
     create_table :snippets do |t|
       t.string :caption
       t.text :content
-      t.string :language
+      t.string :language, :default => 'ruby'
       t.integer :section_id
 
       t.timestamps
