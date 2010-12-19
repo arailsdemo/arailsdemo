@@ -1,13 +1,13 @@
-%h1= "Building This Site"
+- title "Building This Site"
 
 - @posts.each do |post|
   .postShow
     .sequence= "#" + post.sequence.to_s
-    .title= link_to post.title, post
-    .date= l post.created_at, :format => :date    
+    .title= link_to post.title, post_url(post.sequence)
+    .date= l post.created_at, :format => :date
     .admin
-      = link_to 'Edit', edit_post_path(post)
-      = link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+      = link_to 'Edit', edit_post_path(post.sequence)
+      = link_to 'Destroy', post_url(post.sequence), :confirm => 'Are you sure?', :method => :delete
     .clear
 
 %br.clear
