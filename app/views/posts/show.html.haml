@@ -12,7 +12,15 @@
           .caption= section.snippet.caption
           ~ sanitize( coderay(section.snippet.content, section.snippet.language) )
     %hr
-    
-= link_to 'Edit', edit_post_path(@post)
+
+.postNav
+  .prev= post_link(:previous)
+  .next= post_link(:next)
+%br
+%br
+%p= link_to 'View All Posts', posts_path
+%br
+
+= link_to 'Edit', edit_post_path(@post.sequence)
 \|
 = link_to 'Back', posts_path
