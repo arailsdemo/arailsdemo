@@ -13,7 +13,7 @@
     /[if IE 8]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
 
-    = stylesheet_link_tag 'scaffold'
+    = stylesheet_link_tag 'scaffold', 'coderay', 'application'
     = javascript_include_tag :defaults
     = csrf_meta_tag
     = yield :head
