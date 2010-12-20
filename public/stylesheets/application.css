@@ -1,0 +1,126 @@
+body.bp {
+  background-color: #f2f2f2;
+  font-size: 14px;
+}
+body.bp h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #882a07;
+}
+body.bp h2 {
+  color: #023b30;
+  margin-bottom: 0;
+}
+
+.logout {
+  display: inline;
+  float: right;
+}
+
+#logo {
+  display: inline;
+  float: left;
+  width: 100px;
+  padding-left: 10px;
+  color: #07886f;
+  font-size: 40px;
+  font-family: "Lucida Grande";
+  font-weight: bold;
+}
+
+#navBar {
+  margin: 10px 0;
+  background-color: #3b1000;
+}
+#navBar ol {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+#navBar ol li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  white-space: nowrap;
+}
+#navBar ol li {
+  *display: inline;
+}
+#navBar ol li {
+  padding: 5px 10px;
+}
+#navBar ol a, #navBar ol a:visited {
+  padding: 5px 5px;
+  color: #82d4c9;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+body.two-col #content {
+  width: 700px;
+}
+body.two-col #content .postShow {
+  padding: 20px 0;
+}
+body.two-col #content .postShow div {
+  float: left;
+  margin-right: 10px;
+  line-height: 2em;
+}
+body.two-col #content .postShow .sequence {
+  width: 30px;
+}
+body.two-col #content .postShow .title {
+  width: 400px;
+}
+body.two-col #content .postShow .title a, body.two-col #content .postShow .title a:visited {
+  text-decoration: none;
+  font-size: 1.8em;
+}
+body.two-col #content .postShow .date {
+  width: 120px;
+}
+body.two-col #content .postShow .admin {
+  width: 80px;
+}
+
+#innerContent {
+  width: 680px;
+  padding: 0 20px;
+}
+
+body.two-col #sidebar {
+  width: 240px;
+}
+
+#innerSidebar {
+  margin: 0 10px;
+  padding: 0 10px;
+  border-left: 1px solid gray;
+}
+
+#footer {
+  padding: 10px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+.section .caption {
+  margin-top: 10px;
+  padding-left: 10px;
+  color: black;
+  background-color: #82d4c9;
+  border: 1px solid black;
+}
+.section .CodeRay {
+  margin-top: 0;
+}

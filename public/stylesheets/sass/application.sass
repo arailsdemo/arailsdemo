@@ -4,3 +4,89 @@ $logo: #07886F
 $darkbrown: #3B1000
 $rust: #882A07
 $pale: #F2F2F2
+
+@import compass/utilities
+
+body.bp
+  :background-color $pale
+  :font-size 14px
+  h1
+    :text-align center
+    :font-size 2.5em
+    :color $rust
+  h2
+    :color $green
+    :margin-bottom 0
+
+.logout
+  +float-right
+
+#logo
+  +float-left
+  :width 100px
+  :padding-left 10px
+  :color $logo
+  :font
+    :size 40px
+    :family "Lucida Grande"
+    :weight bold
+
+#navBar
+  :margin 10px 0
+  :background-color $darkbrown
+  ol
+    +inline-block-list
+    li
+      :padding 5px 10px
+    a, a:visited
+      :padding 5px 5px
+      :color $brightaqua
+      :text-decoration none
+      :font
+        :size 16px
+
+body.two-col #content
+  :width 700px
+  .postShow
+    :padding 20px 0
+    div
+      :float left
+      :margin-right 10px
+      :line-height 2em
+    .sequence
+      :width 30px
+    .title
+      :width 400px
+      a, a:visited
+        :text-decoration none
+        :font-size 1.8em
+    .date
+      :width 120px
+    .admin
+      :width 80px
+
+#innerContent
+  :width 680px
+  :padding 0 20px
+
+body.two-col #sidebar
+  :width 240px
+
+#innerSidebar
+  :margin 0 10px
+  :padding 0 10px
+  :border-left 1px solid gray
+
+#footer
+  :padding 10px
+
+.section
+  :margin-bottom 20px
+  .caption
+    :margin-top 10px
+    :padding-left 10px
+    :color black
+    :background-color $brightaqua
+    :border 1px solid black
+  .CodeRay
+    :margin-top 0
