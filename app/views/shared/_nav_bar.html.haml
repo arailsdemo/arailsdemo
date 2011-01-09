@@ -2,5 +2,9 @@
   %ol
     %li= link_to 'Home', root_url
     %li= link_to 'Building This Site', posts_url
-    %li= link_to 'Sections', sections_url
-    %li= link_to 'Snippets', snippets_url
+    - if admin?
+      %li= link_to 'Sections', sections_url
+      %li= link_to 'Snippets', snippets_url
+      %li= link_to 'Logout', logout_url
+    - else
+      %li= link_to 'Login', login_url
