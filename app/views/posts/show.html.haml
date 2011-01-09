@@ -5,7 +5,7 @@
 - for section in @post.sections
   .section
     %h2= section.heading
-    .body= raw section.body
+    .body= sanitize section.body
     - unless section.snippet.blank?
       .snippet
         .content
@@ -21,6 +21,7 @@
 %p= link_to 'View All Posts', posts_path
 %br
 
-= link_to 'Edit', edit_post_path(@post.sequence)
-\|
-= link_to 'Back', posts_path
+-if admin?
+  = link_to 'Edit', edit_post_path(@post.sequence)
+  |
+  = link_to 'New', new_post_path
