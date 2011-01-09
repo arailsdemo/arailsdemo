@@ -1,4 +1,6 @@
 Arailsdemo::Application.routes.draw do
+  get "pages/home"
+
   post 'login', :to => 'sessions#create'
   match 'login', :to => 'sessions#new', :as => 'login'
   match 'logout', :to => 'sessions#destroy', :as => 'logout'
@@ -9,5 +11,5 @@ Arailsdemo::Application.routes.draw do
 
   resources :posts
 
-  root :to => "posts#index"
+  root :to => "pages#home"
 end
